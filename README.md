@@ -5,7 +5,7 @@ Time picker component for Vue
 # Screenshot
 ![pic](/images/pic.png)
 
-# Instllation
+# Installation
 
 ```shell
 $ npm install vue-timepicker
