@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm test",
     "dev": "webpack-dev-server --inline --hot",
-    "build": "webpack --config webpack.config.prod.js"
+    "build": "webpack -p --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",

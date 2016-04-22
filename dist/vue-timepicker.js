@@ -465,7 +465,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 6 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"vue-time-picker-panel\" _v-98eb7a12=\"\"><div class=\"vue-time-picker-panel-inner\" _v-98eb7a12=\"\"><div class=\"vue-time-picker-panel-input-wrap\" _v-98eb7a12=\"\"><input v-model=\"time\" class=\"vue-time-picker-panel-input\" _v-98eb7a12=\"\"></div><!-- div.vue-time-picker-panel-combobox(v-show='isActive')--><div class=\"vue-time-picker-panel-combobox\" _v-98eb7a12=\"\"><div class=\"vue-time-picker-panel-select\" _v-98eb7a12=\"\"><ul _v-98eb7a12=\"\"><li v-for=\"item in hourData\" @click=\"\" _v-98eb7a12=\"\">{{item}}</li></ul></div><div class=\"vue-time-picker-panel-select\" _v-98eb7a12=\"\"><ul _v-98eb7a12=\"\"><li v-for=\"item in minuteData\" _v-98eb7a12=\"\">{{item}}</li></ul></div></div></div></div>";
+	module.exports = "<div class=\"vue-time-picker-panel\" _v-98eb7a12=\"\"><div class=\"vue-time-picker-panel-inner\" _v-98eb7a12=\"\"><div class=\"vue-time-picker-panel-input-wrap\" _v-98eb7a12=\"\"><input v-model=\"time\" class=\"vue-time-picker-panel-input\" _v-98eb7a12=\"\"></div><!-- div.vue-time-picker-panel-combobox(v-show='isActive')--><div class=\"vue-time-picker-panel-combobox\" _v-98eb7a12=\"\"><div class=\"vue-time-picker-panel-select\" _v-98eb7a12=\"\"><ul _v-98eb7a12=\"\"><li v-for=\"item in hourData\" @click=\"\" v-text=\"item\" _v-98eb7a12=\"\"></li></ul></div><div class=\"vue-time-picker-panel-select\" _v-98eb7a12=\"\"><ul _v-98eb7a12=\"\"><li v-for=\"item in minuteData\" v-text=\"item\" _v-98eb7a12=\"\"></li></ul></div></div></div></div>";
 
 /***/ }
 /******/ ])

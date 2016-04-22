@@ -7,10 +7,10 @@
       div.vue-time-picker-panel-combobox()
         div.vue-time-picker-panel-select
           ul
-            li(v-for='item in hourData', @click='') {{item}}
+            li(v-for='item in hourData', @click='', v-text='item')
         div.vue-time-picker-panel-select
           ul
-            li(v-for='item in minuteData') {{item}}
+            li(v-for='item in minuteData', v-text='item')
 </template>
 
 <script>
