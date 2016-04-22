@@ -1,32 +1,53 @@
 <template lang="jade">
-  div.vue-time-picker-panel
+  div.vue-time-picker-panel(@click.stop)
     div.vue-time-picker-panel-inner
-      div.vue-time-picker-panel-input-wrap
+      div.vue-time-picker-panel-input-wrap(@click='isActive = !isActive')
         input.vue-time-picker-panel-input(v-model='time')
-      // div.vue-time-picker-panel-combobox(v-show='isActive')
-      div.vue-time-picker-panel-combobox()
+      div.vue-time-picker-panel-combobox(v-show='isActive')
         div.vue-time-picker-panel-select
           ul
-            li(v-for='item in hourData', @click='', v-text='item')
+            li(
+              v-for='item in hourData',
+              @click='hour = item',
+              :class="{'selected': item === hour}"
+              v-text='item')
         div.vue-time-picker-panel-select
           ul
-            li(v-for='item in minuteData', v-text='item')
+            li(
+              v-for='item in minuteData',
+              @click='minute = item',
+              :class="{'selected': item === minute}"
+              v-text='item')
 </template>
 
 <script>
 export default {
   data() {
     return {
+      isActive: false,
       time: '',
+      hour: '',
+      minute: '',
       hourData: [],
       minuteData: []
+    }
+  },
+  methods: {
+  },
+  computed: {
+    time() {
+      if (this.hour || this.minute) {
+        return `${this.hour} : ${this.minute}`
+      }
+
+      return ''
     }
   },
   created() {
     let tempHour = []
     let tempMinute = []
 
-    for (let i=1; i<=12; i++) {
+    for (let i=1; i<=24; i++) {
       tempHour.push(i)
     }
 
@@ -36,6 +57,10 @@ export default {
 
     this.hourData = tempHour
     this.minuteData = tempMinute
+
+    document.addEventListener('click', () => {
+      this.isActive = false;
+    })
   }
 }
 </script>
