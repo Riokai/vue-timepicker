@@ -1,5 +1,5 @@
 var Vue = require('vue')
-var app = require('../src/index.vue')
+var TimePicker = require('../src/index.vue')
 
 new Vue({
   el: '#app',
@@ -7,6 +7,6 @@ new Vue({
     a: 1
   },
   components: {
-    app: app
+    TimePicker: TimePicker
   }
 })

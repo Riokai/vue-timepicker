@@ -18,5 +18,11 @@ module.exports = {
         loader: 'vue'
       }
     ]
+  },
+  vue: {
+    loaders: {
+      scss: 'style!css!sass',
+      exclude: 'node_modules'
+    }
   }
 }
