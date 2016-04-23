@@ -4,7 +4,7 @@ var TimePicker = require('../src/index.vue')
 new Vue({
   el: '#app',
   data: {
-    a: 1
+    myTime: ''
   },
   components: {
     TimePicker: TimePicker

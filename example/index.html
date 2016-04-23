@@ -6,7 +6,8 @@
 </head>
 <body>
   <div id="app">
-    <time-picker></time-picker>
+    <h1>{{ myTime }}</h1>
+    <time-picker :time.sync="myTime"></time-picker>
   </div>
   <script src="./build.js"></script>
 </body>

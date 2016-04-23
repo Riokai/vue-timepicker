@@ -1,5 +1,5 @@
 <template lang="jade">
-  div.vue-time-picker-panel(@click.stop)
+  div.vue-time-picker-panel(@click.stop='')
     div.vue-time-picker-panel-inner
       div.vue-time-picker-panel-input-wrap(@click='isActive = !isActive')
         input.vue-time-picker-panel-input(v-model='time')
@@ -21,11 +21,25 @@
 </template>
 
 <script>
+function range(start, end) {
+  let result = []
+
+  for (let i = start; i <= end; i++) {
+    result.push(i)
+  }
+
+  return result
+}
+
 export default {
+  props: {
+    time: String,
+    twoWay: true
+    // required: true
+  },
   data() {
     return {
       isActive: false,
-      time: '',
       hour: '',
       minute: '',
       hourData: [],
@@ -44,19 +58,8 @@ export default {
     }
   },
   created() {
-    let tempHour = []
-    let tempMinute = []
-
-    for (let i=1; i<=24; i++) {
-      tempHour.push(i)
-    }
-
-    for (let i=1; i<=60; i++) {
-      tempMinute.push(i)
-    }
-
-    this.hourData = tempHour
-    this.minuteData = tempMinute
+    this.hourData = range(1, 24)
+    this.minuteData = range(1, 60)
 
     document.addEventListener('click', () => {
       this.isActive = false;

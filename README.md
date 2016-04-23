@@ -22,7 +22,9 @@ import TimePicker from 'vue-timepicker'
 
 new Vue({
   el: '#app',
-
+  data: {
+    myTime: ''
+  },
   components: {
     TimePicker: TimePicker
   }
@@ -31,8 +33,8 @@ new Vue({
 
 ```html
 <div id="app">
-  <time-picker></time-picker>
-</div>
+  <h1>{{ myTime }}</h1>
+  <time-picker :time.sync="myTime"></time-picker>
 ```
 
 # Development

@@ -1,12 +1,12 @@
 {
   "name": "vue-timepicker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "timepicker, vue-component, vue-plugin",
   "main": "dist/vue-timepicker.js",
   "scripts": {
     "test": "npm test",
     "dev": "webpack-dev-server --inline --hot",
-    "build": "webpack -p --config webpack.config.prod.js"
+    "build": "webpack --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
