@@ -2,16 +2,16 @@
 
 Time picker component for Vue
 
-# Screenshot
+## Screenshot
 ![pic](/images/pic.png)
 
-# Installation
+## Installation
 
 ```shell
 $ npm install vue-timepicker
 ```
 
-# Usage
+## Usage
 
 ```js
 var Vue = require('vue')
@@ -37,10 +37,15 @@ new Vue({
   <time-picker :time.sync="myTime"></time-picker>
 ```
 
-# Development
+## Development
 
 ```shell
 $ npm install
 
 $ npm run dev
 ```
+
+## Todo
+- [ ] support default value(e.g. now time)
+- [ ] optional second selector
+- [ ] on change callback 
