@@ -46,6 +46,7 @@ $ npm run dev
 ```
 
 ## Todo
+- [ ] unit test
 - [ ] support default value(e.g. now time)
 - [ ] optional second selector
-- [ ] on change callback 
+- [ ] on change callback
